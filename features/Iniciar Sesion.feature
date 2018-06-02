@@ -6,16 +6,23 @@ EDITAR DATOS DE LA CUENTA
 
 Scenario:
             Given   Visito la pagina de inicio
-            Then    deberia mostrar el boton "Comenzar a jugar"
+            When    presiono el boton "INGRESA"
+            Then    deberia mostrarme la pagina para iniciar sesion
+            And     deberia mostrar el mensaje "Ingresa a nuestro sitio"
 
 Scenario:
             Given   Visito la pagina de inicio
-            When    presiono el boton "Comenzar a jugar"
-            Then    Deberia mostrarme la pagina del juego
+            When    presiono el boton "INGRESA"
+            And     ingreso en el campo "user[email]" el texto "pepe@gmail.com"
+            And     ingreso en el campo "user[email]" el texto "pepe1234"
+            Then    deberia mostrar el mensaje "Correo o contraseña invalidos"
 
 Scenario:
-            Given   Visito la pagina de inicio 
-            Then    deberia mostrar el mensaje "Activar movimiento de los monstruos"
+            Given   Visito la pagina de inicio
+            When    presiono el boton "INGRESA"
+            And     ingreso en el campo "user[email]" el texto "pepe@gmail.com"
+            And     ingreso en el campo "user[email]" el texto "pepe1234"
+            Then    deberia mostrar el mensaje "Correo o contraseña invalidos"
 Scenario:
             Given   Visito la pagina de inicio
             When    presiono el boton "Comenzar a jugar"

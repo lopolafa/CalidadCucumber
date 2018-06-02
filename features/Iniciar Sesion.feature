@@ -19,16 +19,16 @@ Scenario:
 
 Scenario:
             Given   Visito la pagina de inicio
+            When    presiono el boton "Ingresa"
+            And     presiono el boton "Iniciar Sesion"
+            Then    deberia mostrar el mensaje "Debe escribir una direccion de correo electronico valida"
+Scenario:
+            Given   Visito la pagina de inicio
             When    presiono el boton "INGRESA"
             And     ingreso en el campo "user[email]" el texto "pepe@gmail.com"
+            Then    deberia mostrar el mensaje "El campo de contraseña no puede estar vacia"
+Scenario:
+            Given   Visito la pagina de inicio
+            When    presiono el boton "INGRESA"
             And     ingreso en el campo "user[email]" el texto "pepe1234"
-            Then    deberia mostrar el mensaje "Correo o contraseña invalidos"
-Scenario:
-            Given   Visito la pagina de inicio
-            When    presiono el boton "Comenzar a jugar"
-            Then    en la pagina del juego deberia mostrarme el mensaje "El movimiento de los monstruos esta false"   
-Scenario:
-            Given   Visito la pagina de inicio
-            When    habilito la opcion de "mov"
-            And     presiono el boton "Comenzar a jugar"
-            Then    en la pagina del juego deberia mostrarme el mensaje "El movimiento de los monstruos esta true"
+            Then    deberia mostrar el mensaje "El campo de correo electronico no puede estar vacia"

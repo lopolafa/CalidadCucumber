@@ -2,8 +2,6 @@ Feature:    Como    Estudinte
             Quiero  Iniciar sesion
             Para    Poder ingresar a mi cuenta
 
-EDITAR DATOS DE LA CUENTA
-
 Scenario:
             Given   Visito la pagina de inicio
             When    presiono el boton "INGRESA"

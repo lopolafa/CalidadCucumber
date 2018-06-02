@@ -1,4 +1,5 @@
-Feature:    Como    Estudinte
+Feature:   
+            Como    Estudiante
             Quiero  Iniciar sesion
             Para    Poder ingresar a mi cuenta
 
@@ -30,3 +31,10 @@ Scenario:
             When    presiono el boton "INGRESA"
             And     ingreso en el campo "user[email]" el texto "pepe1234"
             Then    deberia mostrar el mensaje "El campo de correo electronico no puede estar vacia"
+
+Scenario:
+            Given   Visito la pagina de inicio
+            When    presiono el boton "INGRESA"
+            And     ingreso en el campo "user[email]" el texto "chilyWilly@gmail.com"
+            And     ingreso en el campo "user[password]" el texto "chilyWilly1234567890"
+            Then    deberia mostrar la pagina de perfil

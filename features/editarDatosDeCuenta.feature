@@ -12,8 +12,8 @@ Background:
 Scenario:
             Given   Visito la pagina principal del perfil
             When    presiono el boton Editar perfil
-            And    ingreso en el campo nombre el texto "administrador"
-            And     ingreso en el campo apellido el texto "super"
+            And    ingreso en el campo nombre "administrador"
+            And     ingreso en el campo apellido "super"
             And     presiono el boton "Actualizar Informacion Personal"
             Then    deberia mostrar el mensaje "Password o contraseña, debe contener por lo menos una mayúscula, una minúscula y un número"
             And    deberia mostrar el mensaje "Current password can't be blank"

@@ -1,8 +1,11 @@
 begin require 'rspec/expectations'; rescue LoadError; require 'spec/expectations'; end
+
+
 require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
-#require 'capybara-screenshot/cucumber'
+require 'capybara-screenshot/cucumber'
+#require 'base64'
 require "selenium-webdriver"
 #PTravel Settings
 ENV['USER']="Pepazo"
@@ -18,6 +21,9 @@ Capybara.app_host = ENV["CAPYBARA_HOST"]
 Capybara.default_max_wait_time = 15
 Capybara.default_driver = :selenium
 Capybara.app_host = "http://bolsadetrabajo.ucbcba.edu.bo/"
+
+
+
 
 class CapybaraDriverRegistrar
   # register a Selenium driver for the given browser to run on the localhost

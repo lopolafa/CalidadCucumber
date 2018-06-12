@@ -1,4 +1,9 @@
-
+Given("Ingreso en la pagina de registro") do
+	page.driver.browser.manage.window.maximize
+ 	visit ('/')
+	xpath = '//*[@id="home-slider"]/div/div[1]/div/a'
+  	find(:xpath, xpath).click
+end
 When("presiono el boton registrate") do 
   xpath = '//*[@id="home-slider"]/div/div[1]/div/a'
   find(:xpath, xpath).click
